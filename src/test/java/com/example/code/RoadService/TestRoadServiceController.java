@@ -70,7 +70,7 @@ public class TestRoadServiceController extends RoadServiceApplicationTests {
 	@Test
 	public  void testfindCityRoutesWithNoRequestParams() throws Exception {
 		System.out.println("testfindCityRoutes");
-		MvcResult mvcResult = mockMvc.perform(MockMvcRequestBuilders.get("/connected").queryParam("","").queryParam("", ""))
+		mockMvc.perform(MockMvcRequestBuilders.get("/connected"))
 	        .andExpect(MockMvcResultMatchers.status().is(400))
 	        .andReturn();
 	        
